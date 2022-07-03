@@ -39,5 +39,12 @@ linear = pickle.load(pickle_in)
 
 predictions = linear.predict(x_test)
 
-# for i, v in enumerate(predictions):
-#     print(v, x_test[i], y_test[i])
+for i, v in enumerate(predictions):
+    print(v, x_test[i], y_test[i])
+
+attr = "Dalc"
+style.use("ggplot")
+plt.scatter(data[attr],data[predict])
+plt.xlabel(attr)
+plt.ylabel(predict)
+plt.show()
